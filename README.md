@@ -3,7 +3,7 @@ How to Train a ML model on Edge Impulse
 
 **Steps to Train a Model on Edge Impulse**
 
-#** 1. Set up Edge Impulse Studio**
+#**1. Set up Edge Impulse Studio**
 Go to Edge Impulse Studio and log in with your account.
 
 Click Create new project and enter a name for your project. Select the relevant category (e.g., "Image Classification", "Sensor Data", etc.).
