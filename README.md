@@ -7,7 +7,8 @@ How to Train a ML model on Edge Impulse
 Go to Edge Impulse Studio and log in with your account.
 
 Click Create new project and enter a name for your project. Select the relevant category (e.g., "Image Classification", "Sensor Data", etc.).
-![image](https://github.com/user-attachments/assets/776130da-2df1-4e21-8a51-929c7fa42cad)
+![image](https://github.com/user-attachments/assets/3683cdd9-6135-41fb-b855-d79ac3bfa933)
+
 
 
 #**2. Collect Data**
