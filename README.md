@@ -41,7 +41,7 @@ For sensor data, create distinct labels for each scenario or condition you're tr
 ![image](https://github.com/user-attachments/assets/132ff819-b086-489c-8844-9a2fdf71fdfa)
 
 
-#**4. Create a Model**
+#**4. Create an Impulse (Model Pipeline)**
 
 Go to the Impulse Design section in Edge Impulse Studio.
 
@@ -57,32 +57,75 @@ Add processing blocks (e.g., FFT for audio, image pre-processing) and a learning
 
 Configure the model architecture and parameters as necessary.
 
-![image](https://github.com/user-attachments/assets/ec330da9-bba3-4ccb-a656-3c8e6b52b35a)
+![image](https://github.com/user-attachments/assets/1d7964b9-f532-474f-b434-8aad545bb71c)
 
 
 
-#**5. Train the Model**
-Once the model is set up, click Start training.
 
-Edge Impulse will begin training the model using the data you've uploaded or streamed.
+#**5. Configure MFCC Parameters**
 
-You can monitor the training progress and performance metrics (accuracy, loss, etc.) as the model trains.
+Go to "MFCC":
 
+Leave default values or adjust:
 
-#**6. Evaluate Model Performance**
-After the model is trained, evaluate its performance on a test dataset that wasn’t used during training.
+Frame length: 0.02s
 
-Edge Impulse provides tools to visualize confusion matrices, accuracy curves, and other performance metrics.
+Frame stride: 0.02s
 
+Filterbanks: 40
 
-#**7. Deploy the Model to Your Device**
+Click "Save Parameters"
 
-Once satisfied with the model's performance, deploy it to your device.
-
-![image](https://github.com/user-attachments/assets/42832d8d-66c7-4383-b809-ee354444ed68)
+![image](https://github.com/user-attachments/assets/04f87434-58da-422d-9814-88cf29e9a94b)
 
 
-In the Deployment section of Edge Impulse Studio, select your target platform (e.g., ESP32, Raspberry Pi).
 
-Follow the instructions to download the model and necessary dependencies to your local machine.
+#**6. Design the Neural Network**
+
+Go to classifier
+- Neural Network (Keras) based model
+- then click SAVE & TRAIN
+
+![image](https://github.com/user-attachments/assets/a1036e9f-f987-43a0-afbd-16c4c2d689b1)
+
+After training, check:
+- Accuracy
+- Loss
+- Confusion Matrix
+
+#**7. Model Testing**
+
+Run your Test dataset through the trained model
+
+Analyze:
+- Confusion matrix
+- Accuracy per class
+- Identify overfitting or underperformance
+
+![image](https://github.com/user-attachments/assets/67c4f4c1-0dea-4df8-b7da-f5319f6db505)
+
+
+#**8. Performance Calibration**
+
+Edge Impulse allows calibration of confidence thresholds
+
+Use this to reduce false positives
+
+E.g., set threshold so model predicts AInak only if >90% confident
+
+![image](https://github.com/user-attachments/assets/8dc3dd4d-0199-4404-9f77-67ca12fa696a)
+
+
+#**9. Deployment**
+Choose:
+- Arduino Library (for ESP32)
+- C++ Library (for ESP-IDF)
+
+Click Build
+
+Download the library
+
+Integrate in Arduino/ESP-IDF project with your I2S mic input
+
+![image](https://github.com/user-attachments/assets/3b36baab-6d64-42f4-9efd-183b378c6de1)
 
