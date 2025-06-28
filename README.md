@@ -1,6 +1,8 @@
 # Model-Taring---Edge-Impulse
 How to Train a ML model on Edge Impulse
 
+You can visit [Link](https://youtu.be/nkENds3GPNs?si=vf1YQZ3EXoSreaMc) for a better and deep understanding
+
 **Steps to Train a Model on Edge Impulse**
 
 #**1. Set up Edge Impulse Studio**
